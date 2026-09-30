@@ -16,6 +16,7 @@ Hard-won rules for the SVG → PNG pipeline. Kept out of the README; read this b
 
 | Rule | Why |
 |---|---|
+| **Never use HTML entities** (`&rarr;` `&mdash;` `&nbsp;` `&hellip;`) | **SVG is XML, not HTML.** They're undefined in XML. Chrome fails to parse and renders an error block — pink `#FFDDDD` / `#CC7777` rectangles plus black text. Use the literal `→` character. Only `&amp;` `&lt;` `&gt;` `&quot;` `&apos;` are legal. |
 | Always write the full font stack | Otherwise Chinese becomes tofu boxes on Windows/Linux |
 | Don't mix CJK and ASCII alignment | CJK glyphs are double-width; ASCII-tuned columns break |
 | Measure English separately from Chinese | English runs wider — a translated diagram overflows |
@@ -59,6 +60,22 @@ Most models can't see images. Never assume — measure.
 | Blank regions | Split into horizontal bands; middle bands must not be empty |
 | Palette drift | Sample known coordinates |
 | GitHub actually loads it | `naturalWidth !== 0` |
+| **Stray colour / parse error** | **Dump the top N colours; anything not in your palette means a parse error** |
+
+### Catch parse errors with a colour histogram
+
+A text-overflow check passes happily on a broken SVG. The fastest tell is a colour count:
+
+```python
+from collections import Counter
+from PIL import Image
+import numpy as np
+a = np.asarray(Image.open('hero.png').convert('RGB'))
+for col, n in Counter(map(tuple, a.reshape(-1, 3))).most_common(10):
+    print(f"  #{col[0]:02X}{col[1]:02X}{col[2]:02X}  {n}")
+```
+
+Any colour that isn't in your source SVG means Chrome hit a parse error and substituted its own error styling. The usual culprits: HTML entities (`&rarr;`), unescaped `&`, raw `<` in text.
 
 ## Reading a diagram in a browser
 

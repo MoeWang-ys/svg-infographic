@@ -39,10 +39,11 @@
 真实输出：
 
 ```
-标签溢出画布        34 个里 0 个
-空白区域            没有（6/6 横带都有内容）
-文件体积            138 KB → 51 KB，看不出偏色
-在 GitHub 上能显示   能（1800 × 930 加载成功）
+标签溢出画布        31 个里 0 个
+异常颜色            没有（解析错误会渲染成粉色块）
+空白区域            没有（7/7 横带都有内容）
+文件体积            135 KB → 46 KB，看不出偏色
+在 GitHub 上能显示   能（1800 × 960 加载成功）
 ```
 
 ## 什么时候用它
@@ -93,6 +94,7 @@ scripts/
   svg2png.sh                  SVG → PNG（Chrome headless + Pillow）
   check_overflow.py           查文本溢出
   check_pixels.py             查墨迹占比、亮度、空白带
+  check_colors.py             查解析错误（HTML 实体误用等）
 references/
   dark-template.html          暗色 HTML 模板，带导出按钮
 assets/                       示例图

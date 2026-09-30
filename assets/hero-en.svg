@@ -1,126 +1,115 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620"
-     role="img" aria-label="svg-infographic: make diagrams with your coding agent, no image model needed">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640"
+     role="img" aria-label="One prompt, two outcomes: an image model misspells, this skill gets every word right">
   <defs>
-    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5"
-            markerWidth="6.5" markerHeight="6.5" orient="auto">
+    <marker id="aw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
       <path d="M0 0 L10 5 L0 10 z" fill="#C08A6A"/>
     </marker>
   </defs>
+  <rect width="1200" height="640" fill="#FBF8F4"/>
 
-  <rect width="1200" height="620" fill="#FBF8F4"/>
+  <text x="52" y="60" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+        font-size="32" font-weight="700" fill="#2C3A42">One prompt, two outcomes</text>
+  <text x="52" y="94" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+        font-size="16.5" fill="#6B7B85">"Draw me a user login flowchart"</text>
 
-  <!-- Title -->
-  <text x="52" y="66" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-        font-size="34" font-weight="700" fill="#2C3A42">svg-infographic</text>
-  <text x="52" y="102" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-        font-size="17" fill="#6B7B85">Diagrams with accurate text — no image model, no API key</text>
+  <!-- LEFT: image model -->
+  <g transform="translate(52,128)">
+    <text x="0" y="0" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="19" font-weight="700" fill="#B05A5A">With an image model</text>
 
-  <!-- arrows first -->
-  <path d="M406 300 L474 300" stroke="#C08A6A" stroke-width="2.6" marker-end="url(#arr)"/>
-  <path d="M726 300 L794 300" stroke="#C08A6A" stroke-width="2.6" marker-end="url(#arr)"/>
-  <path d="M1046 300 L1114 300" stroke="#C08A6A" stroke-width="2.6" marker-end="url(#arr)"/>
+    <rect x="0" y="20" width="520" height="248" rx="14" fill="#FFFFFF" stroke="#E8D5D2" stroke-width="1.6"/>
 
-  <!-- Step 1 -->
-  <g transform="translate(52,196)">
-    <rect width="354" height="208" rx="14" fill="#FFFFFF" stroke="#E3D9CE" stroke-width="1.6"/>
-    <circle cx="34" cy="38" r="17" fill="#C08A6A"/>
-    <text x="34" y="44" text-anchor="middle" font-family="ui-sans-serif,-apple-system,sans-serif"
-          font-size="17" font-weight="700" fill="#FFFFFF">1</text>
-    <text x="64" y="45" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="21" font-weight="700" fill="#2C3A42">Write SVG</text>
-    <text x="34" y="92" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#5C6B75">Fixed 1200 wide, height by content</text>
-    <text x="34" y="122" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#5C6B75">Full font stack, or CJK breaks</text>
-    <text x="34" y="152" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#5C6B75">Group with transform, move in blocks</text>
-    <text x="34" y="182" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#8A9AA5">Arrows before boxes</text>
+    <rect x="34" y="50" width="200" height="58" rx="9" fill="#FBEDEB" stroke="#D89A9A" stroke-width="1.4"/>
+    <text x="134" y="78" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="16" font-weight="600" fill="#B05A5A">User Login</text>
+    <text x="134" y="98" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="12.5" fill="#C08A8A">got this one right</text>
+
+    <rect x="286" y="50" width="200" height="58" rx="9" fill="#F7E0DE" stroke="#D07A7A" stroke-width="1.8"/>
+    <text x="386" y="78" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="16" font-weight="600" fill="#B04545">Uesr Cnetre</text>
+    <text x="386" y="98" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="12.5" fill="#C06A6A">letters swapped</text>
+
+    <rect x="34" y="128" width="200" height="58" rx="9" fill="#F7E0DE" stroke="#D07A7A" stroke-width="1.8"/>
+    <text x="134" y="156" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="16" font-weight="600" fill="#B04545">Pa%sw#rd R2lt</text>
+    <text x="134" y="176" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="12.5" fill="#C06A6A">outright gibberish</text>
+
+    <rect x="286" y="128" width="200" height="58" rx="9" fill="#F7E0DE" stroke="#D07A7A" stroke-width="1.8"/>
+    <text x="386" y="156" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="16" font-weight="600" fill="#B04545">Save &amp; Exit</text>
+    <text x="386" y="176" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="12.5" fill="#C06A6A">one letter missing</text>
+
+    <line x1="34" y1="204" x2="486" y2="204" stroke="#EED9D6" stroke-width="1"/>
+    <text x="34" y="228" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="14" fill="#8A6A6A">Fix one typo → regenerate everything → break something else</text>
+    <text x="34" y="252" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="13.5" fill="#A88A8A">Different every run. Can't edit. Can't diff.</text>
   </g>
 
-  <!-- Step 2 -->
-  <g transform="translate(478,196)">
-    <rect width="248" height="208" rx="14" fill="#FFFFFF" stroke="#E3D9CE" stroke-width="1.6"/>
-    <circle cx="34" cy="38" r="17" fill="#C08A6A"/>
-    <text x="34" y="44" text-anchor="middle" font-family="ui-sans-serif,-apple-system,sans-serif"
-          font-size="17" font-weight="700" fill="#FFFFFF">2</text>
-    <text x="64" y="45" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="21" font-weight="700" fill="#2C3A42">Render</text>
-    <text x="34" y="96" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#5C6B75">Chrome headless</text>
-    <text x="34" y="126" font-family="ui-monospace,Menlo,monospace"
-          font-size="13" fill="#8A6A4F">--window-size &gt;= viewBox</text>
-    <text x="34" y="156" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#5C6B75">scale 1.5 is the sweet spot</text>
-    <text x="34" y="186" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#8A9AA5">Skip cairosvg</text>
+  <path d="M600 260 L648 260" stroke="#C08A6A" stroke-width="2.8" marker-end="url(#aw)"/>
+
+  <!-- RIGHT: this skill -->
+  <g transform="translate(676,128)">
+    <text x="0" y="0" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="19" font-weight="700" fill="#3E7A5E">With this skill</text>
+
+    <rect x="0" y="20" width="472" height="248" rx="14" fill="#FFFFFF" stroke="#CFE3D8" stroke-width="1.6"/>
+
+    <rect x="34" y="50" width="200" height="58" rx="9" fill="#EAF4EE" stroke="#8FBFA4" stroke-width="1.4"/>
+    <text x="134" y="78" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="16" font-weight="600" fill="#2F6B4F">User Login</text>
+    <text x="134" y="98" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="12.5" fill="#6B9B82">exactly as typed</text>
+
+    <rect x="264" y="50" width="174" height="58" rx="9" fill="#EAF4EE" stroke="#8FBFA4" stroke-width="1.4"/>
+    <text x="351" y="78" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="16" font-weight="600" fill="#2F6B4F">User Centre</text>
+    <text x="351" y="98" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="12.5" fill="#6B9B82">spelled right</text>
+
+    <rect x="34" y="128" width="200" height="58" rx="9" fill="#EAF4EE" stroke="#8FBFA4" stroke-width="1.4"/>
+    <text x="134" y="156" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="16" font-weight="600" fill="#2F6B4F">Check Password</text>
+    <text x="134" y="176" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="12.5" fill="#6B9B82">all letters present</text>
+
+    <rect x="264" y="128" width="174" height="58" rx="9" fill="#EAF4EE" stroke="#8FBFA4" stroke-width="1.4"/>
+    <text x="351" y="156" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="16" font-weight="600" fill="#2F6B4F">Go to Home</text>
+    <text x="351" y="176" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="12.5" fill="#6B9B82">identical every run</text>
+
+    <line x1="34" y1="204" x2="438" y2="204" stroke="#D8E8DF" stroke-width="1"/>
+    <text x="34" y="228" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="14" fill="#4A7A62">Edit one word → only that word changes</text>
+    <text x="34" y="252" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="13.5" fill="#6B9B82">8 KB vector. Commits to git. Diffs cleanly.</text>
   </g>
 
-  <!-- Step 3 -->
-  <g transform="translate(798,196)">
-    <rect width="248" height="208" rx="14" fill="#FFFFFF" stroke="#E3D9CE" stroke-width="1.6"/>
-    <circle cx="34" cy="38" r="17" fill="#C08A6A"/>
-    <text x="34" y="44" text-anchor="middle" font-family="ui-sans-serif,-apple-system,sans-serif"
-          font-size="17" font-weight="700" fill="#FFFFFF">3</text>
-    <text x="64" y="45" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="21" font-weight="700" fill="#2C3A42">Compress</text>
-    <text x="34" y="96" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#5C6B75">quantize to 128 colours</text>
-    <text x="34" y="126" font-family="ui-monospace,Menlo,monospace"
-          font-size="13" fill="#8A6A4F">dither=NONE is mandatory</text>
-    <text x="34" y="156" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#5C6B75">430 KB to 140 KB</text>
-    <text x="34" y="186" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#8A9AA5">Check colour error after</text>
+  <!-- bottom: what you get -->
+  <g transform="translate(52,430)">
+    <rect width="1096" height="80" rx="12" fill="#FFFFFF" stroke="#E3D9CE" stroke-width="1.5"/>
+    <text x="28" y="32" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="15" font-weight="700" fill="#2C3A42">What you end up with</text>
+    <text x="28" y="60" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="14" fill="#6B7B85">Architecture diagrams, flowcharts, comparison charts, README banners — every label right, editable, in git, zero API cost.</text>
   </g>
 
-  <!-- Step 4 -->
-  <g transform="translate(1118,196)">
-    <rect x="-78" width="78" height="208" rx="14" fill="#F3EBE2" stroke="#C08A6A" stroke-width="1.8"/>
-    <text x="-39" y="45" text-anchor="middle" font-family="ui-sans-serif,-apple-system,sans-serif"
-          font-size="17" font-weight="700" fill="#C08A6A">4</text>
-    <text x="-62" y="100" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="17" font-weight="700" fill="#2C3A42">Veri-</text>
-    <text x="-62" y="126" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="17" font-weight="700" fill="#2C3A42">fy</text>
-    <text x="-62" y="166" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="12.5" fill="#8A9AA5">you</text>
-    <text x="-62" y="184" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="12.5" fill="#8A9AA5">can't</text>
-    <text x="-62" y="202" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="12.5" fill="#8A9AA5">see it</text>
-  </g>
-
-  <!-- Bottom -->
-  <text x="52" y="470" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-        font-size="18" font-weight="700" fill="#2C3A42">Checked automatically — because you can't see your own output</text>
-
-  <g transform="translate(52,494)">
-    <rect width="264" height="86" rx="12" fill="#FFFFFF" stroke="#E3D9CE" stroke-width="1.5"/>
-    <text x="20" y="34" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="15" font-weight="600" fill="#2C3A42">1. Label overflow</text>
-    <text x="20" y="60" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="13" fill="#7C8A94">getBBox on every text node</text>
-  </g>
-  <g transform="translate(332,494)">
-    <rect width="264" height="86" rx="12" fill="#FFFFFF" stroke="#E3D9CE" stroke-width="1.5"/>
-    <text x="20" y="34" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="15" font-weight="600" fill="#2C3A42">2. Blank regions</text>
-    <text x="20" y="60" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="13" fill="#7C8A94">ink coverage per band</text>
-  </g>
-  <g transform="translate(612,494)">
-    <rect width="264" height="86" rx="12" fill="#FFFFFF" stroke="#E3D9CE" stroke-width="1.5"/>
-    <text x="20" y="34" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="15" font-weight="600" fill="#2C3A42">3. Colour drift</text>
-    <text x="20" y="60" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="13" fill="#7C8A94">sample known pixels</text>
-  </g>
-  <g transform="translate(892,494)">
-    <rect width="256" height="86" rx="12" fill="#FFFFFF" stroke="#E3D9CE" stroke-width="1.5"/>
-    <text x="20" y="34" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="15" font-weight="600" fill="#2C3A42">4. Real load</text>
-    <text x="20" y="60" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="13" fill="#7C8A94">naturalWidth != 0</text>
+  <!-- bottom: numbers -->
+  <g transform="translate(52,532)">
+    <text x="0" y="18" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="15" font-weight="700" fill="#2C3A42">Measured</text>
+    <text x="106" y="18" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="14" fill="#6B7B85">~8 KB per diagram</text>
+    <text x="286" y="18" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="14" fill="#6B7B85">·  34 labels, 0 overflowing</text>
+    <text x="516" y="18" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="14" fill="#6B7B85">·  $0 in API fees</text>
+    <text x="678" y="18" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="14" fill="#6B7B85">·  one-word edits</text>
   </g>
 </svg>

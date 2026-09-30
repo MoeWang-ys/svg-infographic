@@ -1,128 +1,121 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620"
-     role="img" aria-label="svg-infographic：不用生图 AI，手写 SVG 做带准确文字的信息图">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640"
+     role="img" aria-label="生图 AI 把字画错，本 skill 每个字都写对">
   <defs>
-    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5"
-            markerWidth="6.5" markerHeight="6.5" orient="auto">
+    <marker id="aw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
       <path d="M0 0 L10 5 L0 10 z" fill="#C08A6A"/>
     </marker>
-    <marker id="arrD" viewBox="0 0 10 10" refX="8" refY="5"
-            markerWidth="6.5" markerHeight="6.5" orient="auto">
-      <path d="M0 0 L10 5 L0 10 z" fill="#8A9AA5"/>
-    </marker>
   </defs>
-
-  <rect width="1200" height="620" fill="#FBF8F4"/>
+  <rect width="1200" height="640" fill="#FBF8F4"/>
 
   <!-- 标题 -->
-  <text x="52" y="66" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-        font-size="34" font-weight="700" fill="#2C3A42">svg-infographic</text>
-  <text x="52" y="102" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-        font-size="17" fill="#6B7B85">带文字的图，别人工智能画 —— 手写 SVG + 程序化验证</text>
+  <text x="52" y="60" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+        font-size="32" font-weight="700" fill="#2C3A42">同一句需求，两种结果</text>
+  <text x="52" y="94" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+        font-size="16.5" fill="#6B7B85">「画一张用户登录流程图」</text>
 
-  <!-- 主流程：箭头先画，方框后画 -->
-  <path d="M406 300 L474 300" stroke="#C08A6A" stroke-width="2.6" marker-end="url(#arr)"/>
-  <path d="M726 300 L794 300" stroke="#C08A6A" stroke-width="2.6" marker-end="url(#arr)"/>
-  <path d="M1046 300 L1114 300" stroke="#C08A6A" stroke-width="2.6" marker-end="url(#arr)"/>
+  <!-- ========== 左：生图 AI ========== -->
+  <g transform="translate(52,128)">
+    <text x="0" y="0" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="19" font-weight="700" fill="#B05A5A">用生图 AI</text>
 
-  <!-- 步骤 1 -->
-  <g transform="translate(52,196)">
-    <rect width="354" height="208" rx="14" fill="#FFFFFF" stroke="#E3D9CE" stroke-width="1.6"/>
-    <circle cx="34" cy="38" r="17" fill="#C08A6A"/>
-    <text x="34" y="44" text-anchor="middle" font-family="ui-sans-serif,-apple-system,sans-serif"
-          font-size="17" font-weight="700" fill="#FFFFFF">1</text>
-    <text x="64" y="45" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="21" font-weight="700" fill="#2C3A42">手写 SVG</text>
-    <text x="34" y="92" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#5C6B75">宽固定 1200，高按内容 480~700</text>
-    <text x="34" y="122" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#5C6B75">字体栈写全，中文才不变方块</text>
-    <text x="34" y="152" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#5C6B75">用 g transform 分组，整块好挪</text>
-    <text x="34" y="182" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#8A9AA5">箭头先画，方框后画</text>
+    <rect x="0" y="20" width="520" height="248" rx="14" fill="#FFFFFF" stroke="#E8D5D2" stroke-width="1.6"/>
+
+    <!-- 方框1：字画错了 -->
+    <rect x="34" y="50" width="200" height="58" rx="9" fill="#FBEDEB" stroke="#D89A9A" stroke-width="1.4"/>
+    <text x="134" y="78" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="16" font-weight="600" fill="#B05A5A">用户登录</text>
+    <text x="134" y="98" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="12.5" fill="#C08A8A">✓ 这句对了</text>
+
+    <!-- 方框2：错字 -->
+    <rect x="286" y="50" width="200" height="58" rx="9" fill="#F7E0DE" stroke="#D07A7A" stroke-width="1.8"/>
+    <text x="386" y="78" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="16" font-weight="600" fill="#B04545">用户中芯</text>
+    <text x="386" y="98" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="12.5" fill="#C06A6A">✗ 「中心」写成了「中芯」</text>
+
+    <!-- 方框3：乱码 -->
+    <rect x="34" y="128" width="200" height="58" rx="9" fill="#F7E0DE" stroke="#D07A7A" stroke-width="1.8"/>
+    <text x="134" y="156" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="16" font-weight="600" fill="#B04545">荳也镸 页ロ人</text>
+    <text x="134" y="176" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="12.5" fill="#C06A6A">✗ 直接是乱码</text>
+
+    <!-- 方框4：缺笔画 -->
+    <rect x="286" y="128" width="200" height="58" rx="9" fill="#F7E0DE" stroke="#D07A7A" stroke-width="1.8"/>
+    <text x="386" y="156" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="16" font-weight="600" fill="#B04545">密码错误</text>
+    <text x="386" y="176" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="12.5" fill="#C06A6A">✗ 「密」少了一笔</text>
+
+    <line x1="34" y1="204" x2="486" y2="204" stroke="#EED9D6" stroke-width="1"/>
+    <text x="34" y="228" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="14" fill="#8A6A6A">改一个错字 → 整张重新生成 → 别处又错了</text>
+    <text x="34" y="252" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="13.5" fill="#A88A8A">每次结果都不一样，没法改，没法进 git</text>
   </g>
 
-  <!-- 步骤 2 -->
-  <g transform="translate(478,196)">
-    <rect width="248" height="208" rx="14" fill="#FFFFFF" stroke="#E3D9CE" stroke-width="1.6"/>
-    <circle cx="34" cy="38" r="17" fill="#C08A6A"/>
-    <text x="34" y="44" text-anchor="middle" font-family="ui-sans-serif,-apple-system,sans-serif"
-          font-size="17" font-weight="700" fill="#FFFFFF">2</text>
-    <text x="64" y="45" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="21" font-weight="700" fill="#2C3A42">转 PNG</text>
-    <text x="34" y="96" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#5C6B75">Chrome headless</text>
-    <text x="34" y="126" font-family="ui-monospace,Menlo,monospace"
-          font-size="13" fill="#8A6A4F">--window-size ≥ viewBox</text>
-    <text x="34" y="156" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#5C6B75">scale=1.5 是甜点</text>
-    <text x="34" y="186" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#8A9AA5">别用 cairosvg</text>
+  <!-- 中间箭头 -->
+  <path d="M600 260 L648 260" stroke="#C08A6A" stroke-width="2.8" marker-end="url(#aw)"/>
+
+  <!-- ========== 右：本 skill ========== -->
+  <g transform="translate(676,128)">
+    <text x="0" y="0" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="19" font-weight="700" fill="#3E7A5E">用本 skill</text>
+
+    <rect x="0" y="20" width="472" height="248" rx="14" fill="#FFFFFF" stroke="#CFE3D8" stroke-width="1.6"/>
+
+    <rect x="34" y="50" width="200" height="58" rx="9" fill="#EAF4EE" stroke="#8FBFA4" stroke-width="1.4"/>
+    <text x="134" y="78" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="16" font-weight="600" fill="#2F6B4F">用户登录</text>
+    <text x="134" y="98" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="12.5" fill="#6B9B82">✓ 就是你写的</text>
+
+    <rect x="264" y="50" width="174" height="58" rx="9" fill="#EAF4EE" stroke="#8FBFA4" stroke-width="1.4"/>
+    <text x="351" y="78" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="16" font-weight="600" fill="#2F6B4F">用户中心</text>
+    <text x="351" y="98" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="12.5" fill="#6B9B82">✓ 一字不差</text>
+
+    <rect x="34" y="128" width="200" height="58" rx="9" fill="#EAF4EE" stroke="#8FBFA4" stroke-width="1.4"/>
+    <text x="134" y="156" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="16" font-weight="600" fill="#2F6B4F">密码校验</text>
+    <text x="134" y="176" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="12.5" fill="#6B9B82">✓ 笔画齐全</text>
+
+    <rect x="264" y="128" width="174" height="58" rx="9" fill="#EAF4EE" stroke="#8FBFA4" stroke-width="1.4"/>
+    <text x="351" y="156" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="16" font-weight="600" fill="#2F6B4F">跳转首页</text>
+    <text x="351" y="176" text-anchor="middle" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="12.5" fill="#6B9B82">✓ 每次一致</text>
+
+    <line x1="34" y1="204" x2="438" y2="204" stroke="#D8E8DF" stroke-width="1"/>
+    <text x="34" y="228" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="14" fill="#4A7A62">改一个字 → 只改那一处，其余分毫不动</text>
+    <text x="34" y="252" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="13.5" fill="#6B9B82">矢量 8 KB，能进 git，能看 diff</text>
   </g>
 
-  <!-- 步骤 3 -->
-  <g transform="translate(798,196)">
-    <rect width="248" height="208" rx="14" fill="#FFFFFF" stroke="#E3D9CE" stroke-width="1.6"/>
-    <circle cx="34" cy="38" r="17" fill="#C08A6A"/>
-    <text x="34" y="44" text-anchor="middle" font-family="ui-sans-serif,-apple-system,sans-serif"
-          font-size="17" font-weight="700" fill="#FFFFFF">3</text>
-    <text x="64" y="45" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="21" font-weight="700" fill="#2C3A42">压缩</text>
-    <text x="34" y="96" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#5C6B75">quantize 128 色</text>
-    <text x="34" y="126" font-family="ui-monospace,Menlo,monospace"
-          font-size="13" fill="#8A6A4F">dither=NONE 必须关</text>
-    <text x="34" y="156" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#5C6B75">430KB → 140KB</text>
-    <text x="34" y="186" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="14.5" fill="#8A9AA5">压完验证色差</text>
+  <!-- 底部：你能拿到什么 -->
+  <g transform="translate(52,430)">
+    <rect width="1096" height="80" rx="12" fill="#FFFFFF" stroke="#E3D9CE" stroke-width="1.5"/>
+    <text x="28" y="32" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="15" font-weight="700" fill="#2C3A42">拿到的图长这样</text>
+    <text x="28" y="60" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="14" fill="#6B7B85">架构图、流程图、对比图、README 首屏横幅 —— 字全对，能改，能进 git，不花一分钱 API 费</text>
   </g>
 
-  <!-- 步骤 4：验证 -->
-  <g transform="translate(1118,196)">
-    <rect x="-78" width="78" height="208" rx="14" fill="#F3EBE2" stroke="#C08A6A" stroke-width="1.8"/>
-    <text x="-39" y="45" text-anchor="middle" font-family="ui-sans-serif,-apple-system,sans-serif"
-          font-size="17" font-weight="700" fill="#C08A6A">4</text>
-    <text x="-62" y="100" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="18" font-weight="700" fill="#2C3A42">验</text>
-    <text x="-62" y="130" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="18" font-weight="700" fill="#2C3A42">证</text>
-    <text x="-62" y="168" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="13" fill="#8A9AA5">离屏</text>
-    <text x="-62" y="188" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="13" fill="#8A9AA5">必备</text>
-  </g>
-
-  <!-- 底部：验证四项 -->
-  <text x="52" y="470" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-        font-size="18" font-weight="700" fill="#2C3A42">程序化验证（模型看不见自己的图，所以必须实测）</text>
-
-  <g transform="translate(52,494)">
-    <rect width="264" height="86" rx="12" fill="#FFFFFF" stroke="#E3D9CE" stroke-width="1.5"/>
-    <text x="20" y="34" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="15" font-weight="600" fill="#2C3A42">① 文本溢出</text>
-    <text x="20" y="60" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="13" fill="#7C8A94">getBBox 量真实包围盒</text>
-  </g>
-  <g transform="translate(332,494)">
-    <rect width="264" height="86" rx="12" fill="#FFFFFF" stroke="#E3D9CE" stroke-width="1.5"/>
-    <text x="20" y="34" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="15" font-weight="600" fill="#2C3A42">② 像素分析</text>
-    <text x="20" y="60" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="13" fill="#7C8A94">墨迹占比 + 横带分布</text>
-  </g>
-  <g transform="translate(612,494)">
-    <rect width="264" height="86" rx="12" fill="#FFFFFF" stroke="#E3D9CE" stroke-width="1.5"/>
-    <text x="20" y="34" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="15" font-weight="600" fill="#2C3A42">③ 主色采样</text>
-    <text x="20" y="60" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="13" fill="#7C8A94">定点取色确认没跑偏</text>
-  </g>
-  <g transform="translate(892,494)">
-    <rect width="256" height="86" rx="12" fill="#FFFFFF" stroke="#E3D9CE" stroke-width="1.5"/>
-    <text x="20" y="34" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="15" font-weight="600" fill="#2C3A42">④ 模拟加载</text>
-    <text x="20" y="60" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
-          font-size="13" fill="#7C8A94">naturalWidth ≠ 0</text>
+  <!-- 底部：数字 -->
+  <g transform="translate(52,532)">
+    <text x="0" y="18" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="15" font-weight="700" fill="#2C3A42">实测</text>
+    <text x="88" y="18" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="14" fill="#6B7B85">单张约 8 KB</text>
+    <text x="248" y="18" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="14" fill="#6B7B85">·  34 个文本 0 溢出</text>
+    <text x="452" y="18" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="14" fill="#6B7B85">·  API 费用 0</text>
+    <text x="608" y="18" font-family="ui-sans-serif,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="14" fill="#6B7B85">·  改一个字只动一行</text>
   </g>
 </svg>

@@ -39,10 +39,11 @@ One side effect: **it doesn't guess.** Before a diagram ships, it gets measured 
 Real output:
 
 ```
-Labels overflowing the canvas   0 of 34
-Blank regions                   none (6/6 bands have content)
-File size                       138 KB → 51 KB, no visible colour shift
-Renders on GitHub               yes (1800 × 930 loaded)
+Labels overflowing the canvas   0 of 31
+Stray colours                   none (a parse error renders as pink blocks)
+Blank regions                   none (7/7 bands have content)
+File size                       135 KB → 46 KB, no visible colour shift
+Renders on GitHub               yes (1800 × 960 loaded)
 ```
 
 ## When to use it
@@ -93,6 +94,7 @@ scripts/
   svg2png.sh                  SVG → PNG (Chrome headless + Pillow)
   check_overflow.py           detect text overflow
   check_pixels.py             ink coverage, luminance, blank bands
+  check_colors.py             detect parse errors (misused HTML entities)
 references/
   dark-template.html          dark HTML template with export buttons
 assets/                       example diagrams
