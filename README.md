@@ -2,37 +2,42 @@
 
 [中文 README](./README.zh.md)
 
-An agent skill for making infographics — architecture diagrams, flowcharts, comparison charts, README banners — as **hand-written SVG**, rendered with Chrome headless.
+**Make diagrams with your coding agent — no image-generation model needed.**
 
-It's a `SKILL.md`, so any coding agent with filesystem and shell access can use it (Claude Code, pi, Cursor).
+Architecture diagrams, flowcharts, comparison charts, README banners. Accurate labels, clean vectors, ~8 KB per file.
 
-Here's a diagram made through the skill — 34 text elements, zero overflow:
+Ask for a diagram, get a diagram:
 
 ![svg-infographic overview](assets/hero.svg)
 
-## What This Does
+## Why no image model
 
-**Text accuracy is the whole point of an infographic — and image-generation models are bad at text, especially Chinese.** So this skill doesn't generate images. It writes SVG by hand, then verifies the result programmatically.
+Image models **draw the picture for you — and get the words wrong.** Chinese especially. An infographic is 100% about its words, so a typo is a dead image.
+
+This skill skips image models entirely. Your agent writes SVG by hand, so **every word is exactly the word you wrote** — and you can edit one label without regenerating the whole picture.
 
 | | Image-gen AI | This skill |
 |---|---|---|
+| **Uses an image model** | Yes, the whole point | **No** |
 | Text accuracy | Often misspells — worse in Chinese | **100% yours** |
 | Change one word | Regenerate everything | Edit one line |
 | File size | Hundreds of KB to MBs | **~8 KB, vector** |
 | Style consistency | Drifts every run | Identical every time |
 | Version control | ❌ Binary | ✅ Text diff |
-| Needs an API key | Yes | **No** |
+| API key / cost per image | Required, paid | **None** |
 
 Use it when **text matters**. Use an image model for illustrations and mood shots. Use Mermaid for pure logic diagrams — GitHub renders it natively for free.
 
-### Key Features
+## What you get
 
-- **Programmatic verification** — overflow detection via `getBBox()`, ink-coverage and luminance analysis, colour sampling, and a GitHub-style load check. This matters because most models can't see their own output.
-- **Chrome headless pipeline** — render to PNG and measure real text bounds. No cairo, no `libcairo.2.dylib` nightmares.
-- **PNG compression** — 430 KB → 140 KB with a pixel-diff check so you never ship colour drift.
-- **Bilingual by default** — Chinese and English layouts measured separately, because English runs wider.
-- **Anti-AI-slop palette** — warm sand, terracotta, ink teal. Curated from `huashu-design`'s no-go list (bye-bye, neon-on-navy and purple gradients).
-- **Dark template included** — an HTML wrapper with copy / PNG / PDF export buttons.
+- **Every label spelled right** — including Chinese, which image models mangle most.
+- **Editable forever** — change one word, not the whole picture. Re-run any time, same result.
+- **~8 KB vector files** — crisp at any zoom, cheap to commit, diffable in git.
+- **No API key, no per-image cost** — it's just SVG and Chrome, both already on your machine.
+- **Verified, not vibes** — every diagram is checked for text overflow, blank regions and colour drift before you ship it.
+- **Looks intentional** — a warm sand / terracotta / ink-teal palette that avoids the neon-on-navy, purple-gradient AI look.
+- **Bilingual out of the box** — Chinese and English layouts measured separately, because English runs wider.
+- **A dark HTML template** with copy / PNG / PDF export buttons.
 
 ## Who is this for
 
@@ -84,16 +89,15 @@ assets/                       example diagrams
 
 Hard-won rules and pitfalls (pipeline flags, font stacks, compression, palette) live in [`RULES.md`](RULES.md).
 
-## The Verified Numbers
+## Quality checks it runs on itself
 
-Every figure below is output from the scripts in this repo.
+Before a diagram ships, it gets measured — not eyeballed. Real output from the scripts in this repo:
 
 ```
-Text overflow      34 texts, 0 overflowing
-Ink / luminance    2.89% coverage, darkest 56 (text rendered)
-Band analysis      6/6 horizontal bands have content
-PNG compression    138 KB → 51 KB (-63%), pixel error 0.04/255
-GitHub load check  naturalWidth × naturalHeight = 1800 × 930
+Labels overflowing the canvas   0 of 34
+Blank regions                    none (6/6 bands have content)
+File size                       138 KB → 51 KB, no visible colour shift
+Renders on GitHub               yes (1800 × 930 loaded)
 ```
 
 ## Credits
