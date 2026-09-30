@@ -1,0 +1,16 @@
+# 自动生成的本地预览（图片 base64 内嵌，体积大）
+preview.html
+docs/preview.html
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# macOS
+.DS_Store
+
+# 编辑器
+.vscode/
+.idea/
