@@ -2,6 +2,10 @@
 
 > 做信息图 / 架构图 / 流程图 / 对比图 / README 配图的完整方法论 —— **手写 SVG + Chrome headless**，附程序化验证脚本。
 
+![svg-infographic 方法论总览](assets/hero.svg)
+
+<sub>↑ 这张图本身就是本 skill 画的：34 个文本元素 0 溢出，4 项程序化验证全过。</sub>
+
 给 AI 编码 agent 用的 skill（Claude Code / pi / Cursor 等均可）。核心主张一句话：
 
 **带文字的图，别让文生图 AI 画，手写 SVG。**
