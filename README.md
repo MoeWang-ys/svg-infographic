@@ -1,5 +1,7 @@
 # SVG Infographic
 
+[中文 README](./README.zh.md)
+
 An agent skill for making infographics — architecture diagrams, flowcharts, comparison charts, README banners — as **hand-written SVG**, rendered with Chrome headless.
 
 It's a `SKILL.md`, so any coding agent with filesystem and shell access can use it (Claude Code, pi, Cursor).
