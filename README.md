@@ -1,111 +1,111 @@
 # SVG Infographic
 
-[中文 README](./README.zh.md)
+[English](./README.en.md)
 
-**Make diagrams with your coding agent — no image-generation model needed.**
+**不用 AI 生图，让你的编码 agent 直接画图。**
 
-Architecture diagrams, flowcharts, comparison charts, README banners. Accurate labels, clean vectors, ~8 KB per file.
+架构图、流程图、对比图、README 配图。字全对、矢量清晰、单张约 8 KB。
 
-Ask for a diagram, get a diagram:
+说一声，图就出来了：
 
-![svg-infographic overview](assets/hero.svg)
+![svg-infographic 总览](assets/hero.svg)
 
-## Why no image model
+## 你有没有遇到过这种事
 
-Image models **draw the picture for you — and get the words wrong.** Chinese especially. An infographic is 100% about its words, so a typo is a dead image.
+让 AI 画张架构图，画得挺好看，**结果图里的字是错的**——「用户中心」写成「用户中芯」，或者干脆变成一堆乱码。
 
-This skill skips image models entirely. Your agent writes SVG by hand, so **every word is exactly the word you wrote** — and you can edit one label without regenerating the whole picture.
+中文尤其严重。改一个错别字？只能整张重新生成，然后**另一个地方又错了**。
 
-| | Image-gen AI | This skill |
+而一张信息图的价值，100% 就在字上。字错了，图再好看也是废的。
+
+这个 skill 换了个思路：**不让 AI 画图，让它写 SVG 代码。**
+
+于是每个字都是你写的字。
+
+## 装上之后
+
+| | 生图 AI | 装上它 |
 |---|---|---|
-| **Uses an image model** | Yes, the whole point | **No** |
-| Text accuracy | Often misspells — worse in Chinese | **100% yours** |
-| Change one word | Regenerate everything | Edit one line |
-| File size | Hundreds of KB to MBs | **~8 KB, vector** |
-| Style consistency | Drifts every run | Identical every time |
-| Version control | ❌ Binary | ✅ Text diff |
-| API key / cost per image | Required, paid | **None** |
+| **要不要生图模型** | 要，这是前提 | **不要** |
+| 文字准确性 | 常画错字，中文更差 | **100% 可控** |
+| 改一个字 | 整张重新生成 | 改一行 |
+| 文件体积 | 几百 KB 到几 MB | **约 8 KB，矢量** |
+| 风格一致性 | 每次飘 | 每次完全一致 |
+| git 里能看 diff | ❌ 二进制 | ✅ 文本 |
+| API key / 每张费用 | 必须，要花钱 | **都不要** |
 
-Use it when **text matters**. Use an image model for illustrations and mood shots. Use Mermaid for pure logic diagrams — GitHub renders it natively for free.
+还有一个副作用：**它不瞎猜**。每张图出货前都会自动量一遍——标签有没有溢出画布、有没有空白区域、颜色有没有跑偏。因为模型看不见自己的输出，所以只能靠量。
 
-## What you get
+真实输出：
 
-- **Every label spelled right** — including Chinese, which image models mangle most.
-- **Editable forever** — change one word, not the whole picture. Re-run any time, same result.
-- **~8 KB vector files** — crisp at any zoom, cheap to commit, diffable in git.
-- **No API key, no per-image cost** — it's just SVG and Chrome, both already on your machine.
-- **Verified, not vibes** — every diagram is checked for text overflow, blank regions and colour drift before you ship it.
-- **Looks intentional** — a warm sand / terracotta / ink-teal palette that avoids the neon-on-navy, purple-gradient AI look.
-- **Bilingual out of the box** — Chinese and English layouts measured separately, because English runs wider.
-- **A dark HTML template** with copy / PNG / PDF export buttons.
+```
+标签溢出画布        34 个里 0 个
+空白区域            没有（6/6 横带都有内容）
+文件体积            138 KB → 51 KB，看不出偏色
+在 GitHub 上能显示   能（1800 × 930 加载成功）
+```
 
-## Who is this for
+## 什么时候用它
 
-Anyone whose coding agent needs to produce a diagram with **accurate labels** — project READMEs, architecture docs, internal explainers. Especially if you work in Chinese.
+- **要字对** —— 架构图、流程图、对比图、README 首屏横幅
+- **要能改** —— 改一个标签不用重画整张
+- **要能进 git** —— 矢量、文本、能 diff
 
-## Installation
+这些场景**别用它**：
 
-Copy `SKILL.md` into your agent's skills directory:
+- 插画、氛围图、写实场景、人物 → 用生图模型
+- 纯逻辑关系图（不在乎排版）→ 用 Mermaid，GitHub 原生渲染，免费
+
+## 怎么装
+
+把 `SKILL.md` 丢进 agent 的 skills 目录：
 
 ```bash
 # pi
 mkdir -p ~/.pi/agent/skills/svg-infographic
 cp SKILL.md ~/.pi/agent/skills/svg-infographic/
 
-# Claude Code (project-level)
+# Claude Code（项目级）
 mkdir -p .claude/skills/svg-infographic
 cp SKILL.md .claude/skills/svg-infographic/
 ```
 
-Requirements:
+要装的东西：
 
 ```bash
-Google Chrome              # rendering, screenshots, and measuring text bounds
+Google Chrome              # 渲染、截图、量文字边界
 python3
-pip install pillow numpy   # pixel analysis + PNG compression
+pip install pillow numpy   # 像素分析 + PNG 压缩
 ```
 
-Then just ask: *"draw an architecture diagram for this README."*
+然后直接跟 agent 说：
 
-## Trigger Phrases
+- 「给这个 README 画张架构图」
+- 「画个流程图说明一下」
+- 「做个前后对比图」
+- "draw an architecture diagram for this README"
 
-- "给 README 配图"
-- "画个架构图" / "做个流程图" / "画张对比图"
-- "画图说明一下" / "整个图看看"
-- "illustrate this in a diagram" / "make an infographic"
-
-## Repository Layout
+## 仓库里有什么
 
 ```
-SKILL.md                      the methodology
+SKILL.md                      方法论本体
 scripts/
-  svg2png.sh                  SVG → PNG (Chrome headless + Pillow)
-  check_overflow.py           text overflow detection
-  check_pixels.py             ink coverage, luminance, band analysis
+  svg2png.sh                  SVG → PNG（Chrome headless + Pillow）
+  check_overflow.py           查文本溢出
+  check_pixels.py             查墨迹占比、亮度、空白带
 references/
-  dark-template.html          dark HTML template with export buttons
-assets/                       example diagrams
+  dark-template.html          暗色 HTML 模板，带导出按钮
+assets/                       示例图
 ```
 
-Hard-won rules and pitfalls (pipeline flags, font stacks, compression, palette) live in [`RULES.md`](RULES.md).
+踩过的坑和硬规则（命令行参数、字体栈、压缩、配色）都在 [`RULES.md`](RULES.md)。发布相关（多语言、图片配对）见 [`github-release`](https://github.com/MoeWang-ys/github-release) skill。
 
-## Quality checks it runs on itself
+## 出处
 
-Before a diagram ships, it gets measured — not eyeballed. Real output from the scripts in this repo:
+- 架构图结构技法参考 [Cocoon-AI/architecture-diagram-generator](https://github.com/Cocoon-AI/architecture-diagram-generator)（MIT）。它的暗色霓虹配色不是本 skill 的默认配色。
+- `references/dark-template.html` 版权归 Cocoon AI，MIT —— 见 `references/dark-template-LICENSE`。
+- 配色禁区规则来自 `huashu-design`。
 
-```
-Labels overflowing the canvas   0 of 34
-Blank regions                    none (6/6 bands have content)
-File size                       138 KB → 51 KB, no visible colour shift
-Renders on GitHub               yes (1800 × 930 loaded)
-```
-
-## Credits
-
-- Structure techniques absorbed from [Cocoon-AI/architecture-diagram-generator](https://github.com/Cocoon-AI/architecture-diagram-generator) (MIT). Its dark-neon palette is not this skill's default.
-- `references/dark-template.html` © Cocoon AI, MIT — see `references/dark-template-LICENSE`.
-- Palette guardrails from `huashu-design`.
-
-## License
+## 许可
 
 MIT
