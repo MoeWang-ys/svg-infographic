@@ -100,7 +100,7 @@ references/
 assets/                       示例图
 ```
 
-踩过的坑和硬规则（命令行参数、字体栈、压缩、配色）都在 [`RULES.md`](RULES.md)。发布相关（多语言、图片配对）见 [`github-release`](https://github.com/MoeWang-ys/github-release) skill。
+踩过的坑和硬规则（命令行参数、字体栈、压缩、配色）都在 [`RULES.md`](RULES.md)。发布相关（多语言、图片配对）见 [`github-release`](https://github.com/MoeWangG/github-release) skill。
 
 ## 出处
 

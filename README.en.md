@@ -100,7 +100,7 @@ references/
 assets/                       example diagrams
 ```
 
-Hard-won rules and pitfalls (CLI flags, font stacks, compression, palette) live in [`RULES.md`](RULES.md). For publishing (multi-language, image pairing), see the [`github-release`](https://github.com/MoeWang-ys/github-release) skill.
+Hard-won rules and pitfalls (CLI flags, font stacks, compression, palette) live in [`RULES.md`](RULES.md). For publishing (multi-language, image pairing), see the [`github-release`](https://github.com/MoeWangG/github-release) skill.
 
 ## Credits
 
